@@ -1,0 +1,5 @@
+.limited__width{
+    max-width: 600px;
+    margin: 0;
+    width: 100%;
+}

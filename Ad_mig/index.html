@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/1fd78dc055.js" crossorigin="anonymous"></script>
+    <title>Ad</title>
+</head>
+
+<body>
+    <div class="max-w-[600px] py-2 px-3">
+        <div class="first__block">
+            <div class="text-[24px] cursor-pointer">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="text-bold text-[22px] py-3">Новое объявление</div>
+            <div class="items">
+            </div>
+        </div>
+        <div class="second__block hidden">
+            <div class="text-[24px]">
+                <i onclick="$('.second__block').fadeOut(0); $('.first__block').fadeIn(300);"
+                    class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="text-bold text-[22px] py-3">Выберите подкатегорию</div>
+            <div class="second__items">
+            </div>
+        </div>
+        <div class="third__block hidden">
+            <div class="text-[24px] cursor-pointer">
+                <i onclick="exit()" class="fa-solid fa-xmark"></i>
+            </div>
+            <h2 class="text-[26px] font-semibold">Выберите фото</h2>
+            <input type="file" multiple onchange="{onSelected}" id="img_picker" class="hidden">
+            <label for="img_picker" class="block w-[200px] h-[200px] bg-[#eee] cursor-pointer rounded-[10px]">
+                <img src="{img}" alt="">
+                <div class="relative">
+                    <div class="absolute left-[60px] top-[60px]">
+                        <img class="w-[70px] h-[70px]" src="./assets/568122.png" alt="">
+                        <h3 class="text-[18px] relative right-5">Добавить фото</h3>
+                    </div>
+                </div>
+            </label>
+            <h2 class="py-3 text-[24px] font-semibold">Видео</h2>
+            <input class="outline-0 block py-4 px-3 w-full bg-[#eee] rounded-[8px]" placeholder="Сылка видео"
+                type="text">
+            <div onclick="$('.third__block').fadeOut(0); $('.fourth__block').fadeIn(300);" class="">
+                <button
+                    class="max-w-[600px] w-full fixed bottom-4 p-3 bg-[#004aad] text-white rounded-[8px] mt-3">Продолжить</button>
+            </div>
+        </div>
+        <div class="fourth__block hidden">
+            <div class="text-[24px] cursor-pointer">
+                <i onclick="$('.fourth__block').fadeOut(0); $('.third__block').fadeIn(300);"
+                    class="fa-solid fa-xmark"></i>
+            </div>
+            <input class="bg-[#eee] outline-0 w-full p-3 rounded-[8px]" name="" placeholder="Заголовок" />
+            <textarea class="bg-[#eee] outline-0 rounded-[10px] w-full mt-3 p-3" name="" placeholder="Описание" id=""
+                cols="20" rows="5"></textarea>
+            <div className="min-w-[600px] flex mt-6">
+                <input type="number" placeholder="цена" class=" outline-0 mt-3 bg-[#eee] rounded-[10px] px-3 py-3 w-[49%]" />
+                <button class="bg-[#004aad] text-white rounded-[10px] py-3 mt-3 px-3 w-[49%]">Договорная</button>
+            </div>
+            <div className="min-w-[600px] flex">
+                <button class="bg-green-500 text-white rounded-[10px] py-3 mt-4 px-3 w-[49%]">Назал</button>
+                <button class="bg-[#004aad] text-white rounded-[10px] py-3 mt-4 px-3 w-[49%]">Договорная</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
